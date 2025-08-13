@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: public
+    description: "Raw tables from the warehouse"
+    tables:
+      - name: customers
+      - name: products
+      - name: transactions
