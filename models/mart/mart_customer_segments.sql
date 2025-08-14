@@ -35,21 +35,21 @@ customer_segments as (
 
         -- Total Spending
         case 
-            when total_spent >= 1000 then 'High'
-            when total_spent >= 500 then 'Medium'
+            when total_spent >= 500 then 'High'
+            when total_spent >= 200 then 'Medium'
             else 'Low'
         end as spending_segment,
 
         -- Purchase Frequency
         case
-            when purchase_count >= 20 then 'Frequent'
-            when purchase_count >= 5 then 'Occasional'
+            when purchase_count >= 6 then 'Frequent'
+            when purchase_count >= 3 then 'Occasional'
             else 'Rare'
         end as frequency_segment,
 
         -- Product Diversity
         case
-            when unique_products >= 10 then 'Diverse'
+            when unique_products >= 2 then 'Diverse'
             else 'Focused'
         end as diversity_segment
 
